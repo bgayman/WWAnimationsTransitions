@@ -12,8 +12,10 @@
 		CD0F5F4E1D195C2000CB403E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD0F5F4C1D195C2000CB403E /* Main.storyboard */; };
 		CD0F5F501D195C2000CB403E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD0F5F4F1D195C2000CB403E /* Assets.xcassets */; };
 		CD0F5F531D195C2000CB403E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD0F5F511D195C2000CB403E /* LaunchScreen.storyboard */; };
-		CD0F5F5E1D195C2000CB403E /* WWAnimationsTransitionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0F5F5D1D195C2000CB403E /* WWAnimationsTransitionsTests.swift */; };
-		CD0F5F691D195C2000CB403E /* WWAnimationsTransitionsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0F5F681D195C2000CB403E /* WWAnimationsTransitionsUITests.swift */; };
+		CD0F5F771D1961A300CB403E /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0F5F761D1961A300CB403E /* ImageViewController.swift */; };
+		CD365DF51D196D8800500C68 /* AssetTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD365DF41D196D8800500C68 /* AssetTransitionController.swift */; };
+		CD365DF71D196F6500500C68 /* AssetTransitionDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD365DF61D196F6500500C68 /* AssetTransitionDriver.swift */; };
+		CD9D2EDA1D1A18F300139271 /* AnimationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D2ED91D1A18F300139271 /* AnimationItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,11 +44,11 @@
 		CD0F5F521D195C2000CB403E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD0F5F541D195C2000CB403E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD0F5F591D195C2000CB403E /* WWAnimationsTransitionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WWAnimationsTransitionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD0F5F5D1D195C2000CB403E /* WWAnimationsTransitionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWAnimationsTransitionsTests.swift; sourceTree = "<group>"; };
-		CD0F5F5F1D195C2000CB403E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD0F5F641D195C2000CB403E /* WWAnimationsTransitionsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WWAnimationsTransitionsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD0F5F681D195C2000CB403E /* WWAnimationsTransitionsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWAnimationsTransitionsUITests.swift; sourceTree = "<group>"; };
-		CD0F5F6A1D195C2000CB403E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD0F5F761D1961A300CB403E /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		CD365DF41D196D8800500C68 /* AssetTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetTransitionController.swift; sourceTree = "<group>"; };
+		CD365DF61D196F6500500C68 /* AssetTransitionDriver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetTransitionDriver.swift; sourceTree = "<group>"; };
+		CD9D2ED91D1A18F300139271 /* AnimationItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +80,6 @@
 			isa = PBXGroup;
 			children = (
 				CD0F5F471D195C2000CB403E /* WWAnimationsTransitions */,
-				CD0F5F5C1D195C2000CB403E /* WWAnimationsTransitionsTests */,
-				CD0F5F671D195C2000CB403E /* WWAnimationsTransitionsUITests */,
 				CD0F5F461D195C2000CB403E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,30 +99,16 @@
 			children = (
 				CD0F5F481D195C2000CB403E /* AppDelegate.swift */,
 				CD0F5F4A1D195C2000CB403E /* ViewController.swift */,
+				CD0F5F761D1961A300CB403E /* ImageViewController.swift */,
+				CD365DF41D196D8800500C68 /* AssetTransitionController.swift */,
+				CD365DF61D196F6500500C68 /* AssetTransitionDriver.swift */,
+				CD9D2ED91D1A18F300139271 /* AnimationItem.swift */,
 				CD0F5F4C1D195C2000CB403E /* Main.storyboard */,
 				CD0F5F4F1D195C2000CB403E /* Assets.xcassets */,
 				CD0F5F511D195C2000CB403E /* LaunchScreen.storyboard */,
 				CD0F5F541D195C2000CB403E /* Info.plist */,
 			);
 			path = WWAnimationsTransitions;
-			sourceTree = "<group>";
-		};
-		CD0F5F5C1D195C2000CB403E /* WWAnimationsTransitionsTests */ = {
-			isa = PBXGroup;
-			children = (
-				CD0F5F5D1D195C2000CB403E /* WWAnimationsTransitionsTests.swift */,
-				CD0F5F5F1D195C2000CB403E /* Info.plist */,
-			);
-			path = WWAnimationsTransitionsTests;
-			sourceTree = "<group>";
-		};
-		CD0F5F671D195C2000CB403E /* WWAnimationsTransitionsUITests */ = {
-			isa = PBXGroup;
-			children = (
-				CD0F5F681D195C2000CB403E /* WWAnimationsTransitionsUITests.swift */,
-				CD0F5F6A1D195C2000CB403E /* Info.plist */,
-			);
-			path = WWAnimationsTransitionsUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,18 +173,21 @@
 		CD0F5F3D1D195C2000CB403E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Brad G.";
 				TargetAttributes = {
 					CD0F5F441D195C2000CB403E = {
 						CreatedOnToolsVersion = 7.1;
+						LastSwiftMigration = 0800;
 					};
 					CD0F5F581D195C2000CB403E = {
 						CreatedOnToolsVersion = 7.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = CD0F5F441D195C2000CB403E;
 					};
 					CD0F5F631D195C2000CB403E = {
 						CreatedOnToolsVersion = 7.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = CD0F5F441D195C2000CB403E;
 					};
 				};
@@ -255,7 +244,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD365DF71D196F6500500C68 /* AssetTransitionDriver.swift in Sources */,
+				CD9D2EDA1D1A18F300139271 /* AnimationItem.swift in Sources */,
 				CD0F5F4B1D195C2000CB403E /* ViewController.swift in Sources */,
+				CD365DF51D196D8800500C68 /* AssetTransitionController.swift in Sources */,
+				CD0F5F771D1961A300CB403E /* ImageViewController.swift in Sources */,
 				CD0F5F491D195C2000CB403E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,7 +257,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD0F5F5E1D195C2000CB403E /* WWAnimationsTransitionsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +264,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD0F5F691D195C2000CB403E /* WWAnimationsTransitionsUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,7 +338,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -386,7 +377,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -402,6 +393,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bradgayman.WWAnimationsTransitions;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -413,6 +405,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bradgayman.WWAnimationsTransitions;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -424,6 +418,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bradgayman.WWAnimationsTransitionsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WWAnimationsTransitions.app/WWAnimationsTransitions";
 			};
 			name = Debug;
@@ -436,6 +431,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bradgayman.WWAnimationsTransitionsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WWAnimationsTransitions.app/WWAnimationsTransitions";
 			};
 			name = Release;
@@ -447,6 +444,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bradgayman.WWAnimationsTransitionsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = WWAnimationsTransitions;
 				USES_XCTRUNNER = YES;
 			};
@@ -459,6 +457,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bradgayman.WWAnimationsTransitionsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = WWAnimationsTransitions;
 				USES_XCTRUNNER = YES;
 			};
@@ -483,6 +483,7 @@
 				CD0F5F6F1D195C2000CB403E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CD0F5F701D195C2000CB403E /* Build configuration list for PBXNativeTarget "WWAnimationsTransitionsTests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +492,7 @@
 				CD0F5F721D195C2000CB403E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CD0F5F731D195C2000CB403E /* Build configuration list for PBXNativeTarget "WWAnimationsTransitionsUITests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +501,7 @@
 				CD0F5F751D195C2000CB403E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

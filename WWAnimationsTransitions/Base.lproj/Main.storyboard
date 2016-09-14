@@ -1,25 +1,144 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11129.15" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="c5C-Ne-K0B">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11103.10"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WWAnimationsTransitions" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="o5R-i8-An8">
+                                <subviews>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Photo1" translatesAutoresizingMaskIntoConstraints="NO" id="mX4-DV-Hs1">
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="CUT-AC-P4F" appends="YES" id="1jt-UD-HF4"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Photo2" translatesAutoresizingMaskIntoConstraints="NO" id="xcZ-4A-gpl">
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="Exm-iC-Os7" appends="YES" id="bCi-dq-Lhx"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Photo3" translatesAutoresizingMaskIntoConstraints="NO" id="Sf1-32-7W2">
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="K9C-NC-OnR" appends="YES" id="aQ7-gQ-YOP"/>
+                                        </connections>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="o5R-i8-An8" secondAttribute="trailing" constant="-20" id="0t6-uc-lKs"/>
+                            <constraint firstItem="o5R-i8-An8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="CWE-zz-tQc"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="o5R-i8-An8" secondAttribute="bottom" id="zL2-6d-O20"/>
+                            <constraint firstItem="o5R-i8-An8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="zSa-NO-6hd"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="INv-1t-z3K"/>
+                    <connections>
+                        <outlet property="stackViewTopConstraint" destination="zSa-NO-6hd" id="0sg-gY-huY"/>
+                        <segue destination="I8x-Wo-kkp" kind="show" identifier="ShowImage" id="HdP-FM-gJi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="CUT-AC-P4F">
+                    <connections>
+                        <action selector="handleTap:" destination="BYZ-38-t0r" id="sI1-ca-xFO"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Exm-iC-Os7">
+                    <connections>
+                        <action selector="handleTap:" destination="BYZ-38-t0r" id="fXE-Cf-ena"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="K9C-NC-OnR">
+                    <connections>
+                        <action selector="handleTap:" destination="BYZ-38-t0r" id="P6A-hh-Tzl"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="1094" y="429"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="akR-ju-Jll">
+            <objects>
+                <viewController id="I8x-Wo-kkp" customClass="ImageViewController" customModule="WWAnimationsTransitions" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AvY-Iv-BqF"/>
+                        <viewControllerLayoutGuide type="bottom" id="tGZ-wG-00Y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YzN-2b-wme">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n8E-hw-Nax">
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="lF0-Vr-USQ" appends="YES" id="emz-Jh-KsK"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="n8E-hw-Nax" firstAttribute="top" secondItem="AvY-Iv-BqF" secondAttribute="bottom" id="4Lh-wR-hZD"/>
+                            <constraint firstItem="n8E-hw-Nax" firstAttribute="leading" secondItem="YzN-2b-wme" secondAttribute="leadingMargin" constant="-20" id="EWW-ZJ-jJS"/>
+                            <constraint firstItem="tGZ-wG-00Y" firstAttribute="top" secondItem="n8E-hw-Nax" secondAttribute="bottom" id="Mn0-IG-g4C"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="n8E-hw-Nax" secondAttribute="trailing" constant="-20" id="fiQ-aS-7DL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="n8E-hw-Nax" id="Hck-tE-vy7"/>
+                        <outlet property="imageViewTopConstraint" destination="4Lh-wR-hZD" id="DMx-Oh-RWD"/>
+                        <outlet property="panGesture" destination="lF0-Vr-USQ" id="4vA-Iz-9ga"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fpg-4v-hgs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="lF0-Vr-USQ">
+                    <connections>
+                        <action selector="handlePan:" destination="I8x-Wo-kkp" id="0vk-fo-tYe"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1822" y="429"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aMK-iu-SXC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="c5C-Ne-K0B" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Cc3-jO-vhE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="yw6-DF-MgL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WKL-D7-XRN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="391" y="429"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Photo1" width="1818" height="1434"/>
+        <image name="Photo2" width="1358" height="1360"/>
+        <image name="Photo3" width="2040" height="1636"/>
+    </resources>
 </document>
